@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #FFF8F0;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hero-bg {
+  background: linear-gradient(135deg, rgba(44,44,44,0.85) 0%, rgba(179,71,46,0.75) 100%),
+              url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920&q=80') center/cover no-repeat;
+}
+
+.menu-card:hover .menu-img {
+  transform: scale(1.08);
+}
+
+.gallery-card:hover .gallery-img {
+  transform: scale(1.1);
+}
+
+.gallery-card:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.testimonial-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #B3472E, #D97706);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(179,71,46,0.4);
+}
+
+.btn-secondary {
+  border: 2px solid #B3472E;
+  color: #B3472E;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #B3472E;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #B3472E;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.feature-icon {
+  background: linear-gradient(135deg, #B3472E, #D97706);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-anim {
+  animation: float 3s ease-in-out infinite;
+}
